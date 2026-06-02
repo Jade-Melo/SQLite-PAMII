@@ -9,9 +9,9 @@ public class ClienteDataModel {
 
     public static String criarTabela(){
         queryCriarTabela += "CREATE TABLE IF NOT EXISTS " + TABELA + "(";
-        queryCriarTabela += ID + "INTEGER PRIMARY KEY AUTOINCREMENT";
-        queryCriarTabela += NOME + "TEXT";
-        queryCriarTabela += EMAIL + "TEXT";
+        queryCriarTabela += ID + " INTEGER PRIMARY KEY AUTOINCREMENT,";
+        queryCriarTabela += NOME + " TEXT,";
+        queryCriarTabela += EMAIL + " TEXT";
         queryCriarTabela += ")";
 
         return queryCriarTabela;

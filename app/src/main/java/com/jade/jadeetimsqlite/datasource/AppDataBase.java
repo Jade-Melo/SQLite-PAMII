@@ -11,12 +11,13 @@ import com.jade.jadeetimsqlite.api.AppUtil;
 import com.jade.jadeetimsqlite.datamodel.ClienteDataModel;
 
 public class AppDataBase extends SQLiteOpenHelper {
-    public static final String NAME = "etim.db";
+    public static final String NAME = "etim.sqlite";
     public static int version = 1;
 
     SQLiteDatabase db;
     public AppDataBase(Context context) {
         super(context, NAME, null, version);
+        db = getWritableDatabase();
     }
 
     @Override
@@ -27,6 +28,5 @@ public class AppDataBase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
     }
 }

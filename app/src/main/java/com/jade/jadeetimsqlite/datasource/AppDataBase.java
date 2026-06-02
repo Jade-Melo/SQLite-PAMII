@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 
 import com.jade.jadeetimsqlite.api.AppUtil;
 import com.jade.jadeetimsqlite.datamodel.ClienteDataModel;
+import com.jade.jadeetimsqlite.datamodel.UsuarioDataModel;
 
 public class AppDataBase extends SQLiteOpenHelper {
     public static final String NAME = "etim.db";
@@ -23,6 +24,8 @@ public class AppDataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         Log.i(AppUtil.TAG, "Criando a tabela " + ClienteDataModel.TABELA);
         db.execSQL(ClienteDataModel.criarTabela());
+        Log.i(AppUtil.TAG, "Criando a tabela " + UsuarioDataModel.TABELA);
+        db.execSQL(UsuarioDataModel.criarTabela());
     }
 
     @Override
